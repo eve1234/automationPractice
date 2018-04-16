@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Practice application Test Suite">
+
+	<listeners>
+		<listener class-name="com.automationpractice.qa.ExtentReportListener.ExtentReporterNG" />
+		<listener class-name="com.automationpractice.qa.analyzer.MyTransformer" />
+	</listeners>
+
+
+	<test name="Automation Practice App Test Cases">
+		<classes>
+			
+			<class name="com.automationpractice.qa.testcases.HomePageTest"></class>
+			<class name="com.automationpractice.qa.testcases.SignInPageTest"></class>
+            
+
+		</classes>
+	</test>
+</suite>

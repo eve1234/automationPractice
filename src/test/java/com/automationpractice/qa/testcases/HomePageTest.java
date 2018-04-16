@@ -28,6 +28,38 @@ public class HomePageTest extends TestBase{
 		
 	}
 	
+	@Test(priority=2)
+	public void contactUsLinkTest(){
+		homePage.contactUsLink();
+		
+	}
+	
+	@Test(priority=3)
+	public void viewMyShoppingCartLinkTest(){
+		homePage.viewMyShoppingCartLink();
+		
+	}
+	
+	
+	@Test(priority=4)
+	public void womenLinkTest() throws InterruptedException{
+		homePage.womenLink();
+		
+	}
+	
+	@Test(priority=5)
+	public void dressesLinkTest() throws InterruptedException{
+		homePage.dressesLink();
+		
+	}
+	
+	/*@Test(priority=6)
+	public void dressesLinkTest(){
+		homePage.dressesLink();
+		
+	}*/
+	
+	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

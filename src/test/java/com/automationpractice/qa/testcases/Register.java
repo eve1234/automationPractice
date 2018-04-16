@@ -69,6 +69,8 @@ public class Register {
 			
 			lanuchApp.driver.findElement(By.id("uniform-optin")).click();
 			
+			
+			//shipping address
 			lanuchApp.driver.findElement(By.id("firstname")).sendKeys("Akos");
 			lanuchApp.driver.findElement(By.id("lastname")).sendKeys("Pokua");
 			
