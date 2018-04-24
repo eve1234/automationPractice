@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.automationpractice.qa.testcases.HomePageTest">
+      <class name="com.automationpractice.qa.testcases.SignInPageTest">
         <methods>
-          <include name="womenLinkTest"/>
-          <include name="dressesLinkTest"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="createAccountTest"/>
         </methods>
-      </class> <!-- com.automationpractice.qa.testcases.HomePageTest -->
+      </class> <!-- com.automationpractice.qa.testcases.SignInPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

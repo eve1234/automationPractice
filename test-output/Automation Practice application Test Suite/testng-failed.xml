@@ -7,13 +7,6 @@
   </listeners>
   <test name="Automation Practice App Test Cases(failed)">
     <classes>
-      <class name="com.automationpractice.qa.testcases.SignInPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="createAccountTest" invocation-numbers="0 0 0 0 1 1"/>
-        </methods>
-      </class> <!-- com.automationpractice.qa.testcases.SignInPageTest -->
       <class name="com.automationpractice.qa.testcases.HomePageTest">
         <methods>
           <include name="womenLinkTest"/>

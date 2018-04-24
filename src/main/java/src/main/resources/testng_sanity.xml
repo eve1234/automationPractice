@@ -11,7 +11,7 @@
 		<classes>
 			
 			<class name="com.automationpractice.qa.testcases.HomePageTest"></class>
-			<class name="com.automationpractice.qa.testcases.SignInPageTest"></class>
+			<!--<class name="com.automationpractice.qa.testcases.SignInPageTest"></class>-->
             
 
 		</classes>

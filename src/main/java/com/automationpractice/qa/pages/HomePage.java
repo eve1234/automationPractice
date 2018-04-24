@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.automationpractice.qa.base.TestBase;
 import com.automationpractice.qa.util.TestUtil;
@@ -31,10 +32,13 @@ public class HomePage extends TestBase {
 	@FindBy(xpath="//a[@title='Blouses']")
 	WebElement blousesLink;
 	
-	@FindBy(xpath="//a[@title='Dresses']")
+	//@FindBy(xpath="//a[@title='Dresses']")
+	@FindBy(xpath="//ul[@class='clearfix submenu-container first-in-line-xs menu-mobile']//a[@title='Dresses']")
 	WebElement dressesLink;
 	
-	@FindBy(xpath="//a[@title='Evening Dresses']")
+	 
+	//@FindBy(xpath="//a[@title='Evening Dresses']")
+	@FindBy(xpath="//ul[@class='clearfix submenu-container first-in-line-xs menu-mobile']//ul[@style]//a[@title='Evening Dresses']")
 	WebElement eveningDressesLink;
 	
 	
@@ -61,6 +65,7 @@ public class HomePage extends TestBase {
 	
 	public HomePage womenLink() throws InterruptedException {
 		
+		Assert.assertEquals(true, womenLink.isDisplayed());
 	    action =new Actions(driver);
 	    Thread.sleep(2000);
 		action.moveToElement(womenLink).build().perform();
@@ -72,12 +77,16 @@ public class HomePage extends TestBase {
 	
 	public HomePage dressesLink() throws InterruptedException {
 		
-		//driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 	    action =new Actions(driver);
 		action.moveToElement(dressesLink).build().perform();
 		//driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[@title='Evening Dresses']")).click();
+		
+		//ul[@class='clearfix submenu-container first-in-line-xs menu-mobile']//ul[@style]//a[@title='Evening Dresses']
+		//driver.findElement(By.xpath("//a[@title='Evening Dresses']")).click();
+		
+		driver.findElement(By.xpath("//ul[@class='clearfix submenu-container first-in-line-xs menu-mobile']//ul[@style]//a[@title='Evening Dresses']")).click();
 		
 		
 		return new HomePage();
